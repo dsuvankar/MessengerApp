@@ -20,7 +20,7 @@ const Chat = () => {
   }, [selectedUserId]);
 
   function connectToWs() {
-    const ws = new WebSocket("wss://messenger-app-api.vercel.app");
+    const ws = new WebSocket("ws://messenger-app-api.vercel.app");
     setWs(ws);
     ws.addEventListener("message", handleMessage);
     ws.addEventListener("close", () => {
