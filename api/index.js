@@ -28,7 +28,7 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: "https://messenger-app-client.vercel.app",
+    origin: process.env.CLIENT_URL,
   })
 );
 
